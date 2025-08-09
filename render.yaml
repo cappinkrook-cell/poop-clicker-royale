@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: poop-clicker-royale-server
+    env: node
+    plan: free
+    rootDir: server
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: CORS_ORIGIN
+        value: "*"
